@@ -82,4 +82,8 @@ workflows:
       - myjob1
       - create_infrastructure
       - configure_inventory
+          requires:
+            - create_infrastructure
       - configure_infrastructure
+          requires:
+            - configure_inventory
